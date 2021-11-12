@@ -18,3 +18,5 @@ jobs:
         with:
           push: true
           tags: supakit25433/bookinfo-ratings:dev
+          secrets: |
+            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
