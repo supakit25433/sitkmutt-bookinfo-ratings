@@ -14,10 +14,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push
-        id: docker_build
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: supakit25433/bookinfo-ratings:dev
-          secrets: |
-            GIT_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+          tags: ghcr.io/supakit25433/bookinfo-ratings:dev
